@@ -1,0 +1,2 @@
+# EasyAuth-AngularJS
+Simple authentification
