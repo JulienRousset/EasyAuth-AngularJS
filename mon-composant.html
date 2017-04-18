@@ -1,0 +1,13 @@
+<div ng-show="!$ctrl.cookieUser">
+    <input type="text" placeholder="pseudo" ng-model="$ctrl.connexion.user"><br><br>
+    <input type="text" placeholder="mdp" ng-model="$ctrl.connexion.mdp">
+    <a ng-click="$ctrl.connection($ctrl.connexion.user,$ctrl.connexion.mdp)" href="#">Je me connect bro</a>
+</div>
+
+<div ng-show="$ctrl.user">
+
+    <div ng-show="$ctrl.user == null || $ctrl.user.length == 0">Une erreur à été détecter pendant l'identification</div>
+
+</div>
+
+<div ng-show="$ctrl.cookieUser">Tu es désormais connectés</div>
