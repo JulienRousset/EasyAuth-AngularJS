@@ -1,13 +1,35 @@
-<div ng-show="!$ctrl.cookieUser">
-    <input type="text" placeholder="pseudo" ng-model="$ctrl.connexion.user"><br><br>
-    <input type="text" placeholder="mdp" ng-model="$ctrl.connexion.mdp">
-    <a ng-click="$ctrl.connection($ctrl.connexion.user,$ctrl.connexion.mdp)" href="#">Je me connect bro</a>
-</div>
+<nav>
+    <div class="nav-wrapper">
+        <div class="container">
+        <a href="#" class="brand-logo">EasyAuth</a>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <center>
+        <h1>EasyAuth</h1>
+    </center>
+    <div class="row">
+        <div class="col s6 offset-s3">
+            <div class="card white white-1">
+                <div class="card-content black-text">
+                    <div ng-show="!$ctrl.cookieUser">
+                        <input type="text" placeholder="pseudo" ng-model="$ctrl.connexion.user"><br><br>
+                        <input type="text" placeholder="mdp" ng-model="$ctrl.connexion.mdp">
+                    </div>
 
-<div ng-show="$ctrl.user">
+                    <div ng-show="$ctrl.user">
 
-    <div ng-show="$ctrl.user == null || $ctrl.user.length == 0">Une erreur à été détecter pendant l'identification</div>
+                        <div ng-show="$ctrl.user == null || $ctrl.user.length == 0">Une erreur à été détecter pendant l'identification</div>
 
-</div>
+                    </div>
 
-<div ng-show="$ctrl.cookieUser">Tu es désormais connectés</div>
+                    <div ng-show="$ctrl.cookieUser">Tu es désormais connectés</div>
+                    <div class="card-action">
+
+                        <a ng-click="$ctrl.connection($ctrl.connexion.user,$ctrl.connexion.mdp)" class="waves-effect waves-light btn-large">Connexion</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
